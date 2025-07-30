@@ -1,7 +1,7 @@
 #@title 1.実行
 !pip install qrcode[pil]
 !wget https://github.com/multitheftauto/unifont/releases/download/v16.0.03/unifont-16.0.03.ttf
-!git clone https://github.com/prism4291/ndrf_dataset2
+!git clone https://github.com/Haruomi-Sakamoto/ndrf_dataset_copy
 from PIL import Image, ImageDraw, ImageFont
 import qrcode
 import subprocess
