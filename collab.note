@@ -1704,7 +1704,8 @@ Charas qr_init() {
             //Pair
             p2 = hash_u64[3] >> 57;
             bp.pair_param = p2 < 125 ? 0 : p2 < 126 ? 1 : 2;
-            if (bp.data[23]==0x8070346e) {
+            uint32_t skilllll = SkillGroupIdList[SkillGroupIdMap[bp.data[24] & 0xfff]];
+            if (1 == 1) {
                 charas.bps.emplace_back(bp);
             }
             if (p2 >= 125) {
@@ -1717,7 +1718,7 @@ Charas qr_init() {
                     p1 = p1 < 103 ? 0 : p1 < 126 ? 1 : 2;
                     bp.data[10] = LotBody2[p1][((hash_u64[1] >> 48) & 0x7f) % LotBodyLen[p1]];
                 }
-                if (bp.data[23]==0x8070346e) {
+                if (1 == 1) {
                     charas.bps.emplace_back(bp);
                 }
             }
@@ -3898,15 +3899,3 @@ gui = widgets.VBox([
 ])
 clear_output(wait=True)
 display(gui)
-
-
-
-
-
-
-
-
-
-
-
-
